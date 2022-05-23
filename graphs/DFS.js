@@ -6,7 +6,7 @@ const dfs = (graph, source) => {
 
         console.log("current", current);
 
-        for (let neighbors in graph[current]) {
+        for (let neighbors of graph[current]) {
             stack.push(neighbors)
         }
     }
@@ -16,6 +16,6 @@ const dfsR = (graph, source) => {
     console.log(source);
 
     for (let neighbors in graph[source]) {
-        dfsR(graph, neig)
+        dfsR(graph, neighbors)
     }
 }

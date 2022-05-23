@@ -4,7 +4,7 @@ const bfs = (graph, source) => {
     while (queue.length > 0) {
         const current = queue.shift()
 
-        for (let neighbors in graph[current]) {
+        for (let neighbors of graph[current]) {
             queue.push(neighbors)
         }
     }

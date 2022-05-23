@@ -12,7 +12,7 @@ const hasPath = (graph, src, dest, visited) => {
 
     visited.add(src)
 
-    for (let neighbor in graph) {
+    for (let neighbor of graph) {
         if (hasPath(graph, neighbor, dest, visited)) {
             return true
         }
