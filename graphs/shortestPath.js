@@ -11,7 +11,7 @@ const shortestPath = (edges, nodeA, nodeB) => {
         for (let neighbor of graph[current]) {
             if(!visited.has(neighbor)) {
                 visited.add(neighbor);
-                queue.push([neighbor, visited + 1])
+                queue.push([neighbor, distance + 1])
             }
         }
     }
